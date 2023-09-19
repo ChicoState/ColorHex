@@ -37,6 +37,7 @@ int main(){
 
 		}	
     	}
+	//test
     }while( input.size() != RGB_HEX_LENGTH && !isdigit(input.at(0)) && flag == true);
 
     std::cout << "Your hex color is: " << input << std::endl;
