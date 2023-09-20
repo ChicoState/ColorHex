@@ -8,6 +8,8 @@ using std::cin;
 
 const int RGB_HEX_LENGTH = 7;
 
+// Comment to test Github Action
+
 int main(){
     string input;
 
