@@ -7,7 +7,7 @@ int main(){
 
     do{
         std::cout << "Enter a color in hex format (#RRGGBB):";
-        std::getline(cin, input);
+        std::getline(std::cin, input);
 
         if( input.size() != RGB_HEX_LENGTH ){
             
