@@ -16,11 +16,12 @@ int main(){
 	int x = 1;
 	alnum = true;
 	while(x < input.size()){
-		if (!isalnum(input[x])){
+		if (!(isalnum(input[x]))){
 			alnum = false;
 			std::cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
 			break;
 		}
+		x++;
 	}
     }while( (input.size() != RGB_HEX_LENGTH) || (input[0] != '#') || (alnum == false));
 
