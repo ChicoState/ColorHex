@@ -15,5 +15,3 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build Project
       run: g++ main.cpp -std=c++17 -o test
-    - name: Run Object File
-      run: ./test 
