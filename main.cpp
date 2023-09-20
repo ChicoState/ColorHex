@@ -1,8 +1,14 @@
 #include <iostream>
 
+using std::string;
+using std::cout;
+using std::getline;
+using std::endl;
+using std::cin;
+
 const int RGB_HEX_LENGTH = 7;
 
-bool is_hex_formatted(const std::string &maybe_hex) {
+bool is_hex_formatted(const string &maybe_hex) {
     if (maybe_hex.size() != RGB_HEX_LENGTH) {
         return false;
     }
@@ -25,21 +31,21 @@ bool is_hex_formatted(const std::string &maybe_hex) {
 }
 
 int main() {
-    std::string input;
+    string input;
     bool hex_formatted = false;
 
     do {
-        std::cout << "Enter a color in hex format (#RRGGBB):";
-        std::getline(std::cin, input);
+        cout << "Enter a color in hex format (#RRGGBB):";
+        getline(cin, input);
         hex_formatted = is_hex_formatted(input);
 
         if (!hex_formatted) {
-            std::cout << "Please enter the color in hexadecimal format, "
-                         "starting with # followed by six hex values\n";
+            cout << "Please enter the color in hexadecimal format, "
+                    "starting with # followed by six hex values\n";
         }
     } while (!hex_formatted);
 
-    std::cout << "Your hex color is: " << input << std::endl;
+    cout << "Your hex color is: " << input << endl;
 
     return 0;
 }
