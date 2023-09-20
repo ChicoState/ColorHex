@@ -20,7 +20,7 @@ bool check_hex(char* input_array[]){
 }
 
 int main(){
-    std::string input[];
+    std::string input;
     do{
         std::cout << "Enter a color in hex format (#RRGGBB):";
         std::getline(cin, input);
