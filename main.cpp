@@ -1,3 +1,5 @@
+#include <iostream>
+
 const int RGB_HEX_LENGTH = 7;
 
 int main(){
