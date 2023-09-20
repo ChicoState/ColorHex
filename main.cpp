@@ -1,26 +1,29 @@
 #include <iostream>
 
-using std::string;
-using std::cout;
-using std::getline;
-using std::endl;
-using std::cin;
-
 const int RGB_HEX_LENGTH = 7;
 
 int main(){
-    string input;
+    std::string input;
+    bool hexornot = true;
 
     do{
-        cout << "Enter a color in hex format (#RRGGBB):";
-        getline(cin, input);
-
-        if( input.size() != RGB_HEX_LENGTH ){
-            cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
+        std::cout << "Enter a color in hex format (#RRGGBB):";
+        std::getline(std::cin, input);
+        hexornot = true;
+        
+        for (int i = 1; i < input.size(); i++) {
+                if (!isalpha(input[i]) & !isdigit(input[i])) {
+                    hexornot = false;
+            }
         }
-    }while( input.size() != RGB_HEX_LENGTH );
 
-    cout << "Your hex color is: " << input << endl;
+        if( input.size() != RGB_HEX_LENGTH & input[0] != '#' & hexornot != true){
+          
+            std::cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
+        }
+    }while( input.size() != RGB_HEX_LENGTH & input[0] != '#' & hexornot != true);
+
+    std::cout << "Your hex color is: " << input << std::endl;
 
     return 0;
 }
