@@ -1,3 +1,3 @@
-[![Lint Code Base](https://github.com/B-Payne/ColorHex/blob/main/main.cpp)
+[![Lint Code Base](https://github.com/B-Payne/ColorHex/blob/main/main.cpp)](https://github.com/B-Payne/ColorHex/blob/main/main.cpp)
 
 # ColorHex
