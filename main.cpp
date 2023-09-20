@@ -14,15 +14,16 @@ int main(){
         }
     }while( input.size() != RGB_HEX_LENGTH );
     int track = 0;
-	while(track < RGB_HEX_LENGTH){
-		if( input[track] == '#'||isdigit(input[track]) || isalpha(input[track]) ){
-			track+=1;
-		}else{
-			std::cout<<"Please enter valide ipute: \n";
-			std::getline(cin, input);
-		}
-	}
+        while(track < RGB_HEX_LENGTH){
+                if( input[track] == '#'||isdigit(input[track]) || isalpha(input[track]) ){
+                        track+=1;
+                }else{
+                        std::cout<<"Please enter valide ipute: \n";
+                        std::getline(cin, input);
+                }
+        }
     std::cout << "Your hex color is: " << input << std::endl;
 
     return 0;
 }
+
