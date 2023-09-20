@@ -1,5 +1,11 @@
 #include <iostream>
 
+using std::string;
+using std::cout;
+using std::getline;
+using std::endl;
+using std::cin;
+
 const int RGB_HEX_LENGTH = 7;
 
 int main(){
@@ -18,6 +24,7 @@ int main(){
         }while( input.size() != RGB_HEX_LENGTH || input.at(0) != '#' );
 
         std::cout << "Your hex color is: " << input << std::endl;
+
 
         return 0;
 }
