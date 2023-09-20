@@ -1,2 +1,2 @@
-https://github.com/gnmeyer/ColorHex/actions/workflows/c-cpp.yml/badge.svg
+https://github.com/gnmeyer/ColorHex/actions/workflows/main.yml/badge.svg
 
