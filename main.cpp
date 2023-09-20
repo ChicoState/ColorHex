@@ -1,5 +1,11 @@
 #include <iostream>
 
+using std::string;
+using std::cout;
+using std::getline;
+using std::endl;
+using std::cin;
+
 const int RGB_HEX_LENGTH = 7;
 
 int main(){
