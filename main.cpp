@@ -5,7 +5,7 @@
 
 const int RGB_HEX_LENGTH = 7;
 
-bool check_hex(char* input_array[]){
+bool check_hex(char input_array[]){
         if(input_array.size() != RGB_HEX_LENGTH || input_array[0] != "#"){
         std::cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
         return false;
@@ -24,7 +24,7 @@ int main(){
     do{
         std::cout << "Enter a color in hex format (#RRGGBB):";
         std::getline(cin, input);
-        char* input_array = new char[length + 1];
+        char input_array = new char[length + 1];
         strcpy(input_array, s.c_str());
     }while(!check_hex(input_array));
     cout << "Your hex color is: " << input << endl;
