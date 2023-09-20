@@ -30,11 +30,13 @@ int main(){
 		
 		
 		if(valid = true){
-		for(int i = 0; i < input.size(); i++){
-			if(input[i] >= 'a' && input[i] <= 'f') || (input[i] >= 'A' && input[i] <= 'F' || input[i] >= '0' || input[i] <= '9'){
-				valid = true;
+			for(int i = 0; i < input.size(); i++){
+				if(input[i] >= 'a' && input[i] <= 'f') || (input[i] >= 'A' && input[i] <= 'F' || input[i] >= '0' || input[i] <= '9'){
+					valid = true;
+				}
+				else
+					valid = false
 			}
-		}
 		}
 		
     }while( valid = false; );
