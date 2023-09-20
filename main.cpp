@@ -1,7 +1,6 @@
 #include <cctype>
 #include <iostream>
 #include <cstring>
-#include <string>
 
 const int RGB_HEX_LENGTH = 7;
 
@@ -20,15 +19,22 @@ bool check_hex(char* input_array[]){
 }
 
 int main(){
-    std::string input[];
+    std::string input;
+
     do{
         std::cout << "Enter a color in hex format (#RRGGBB):";
         std::getline(cin, input);
-        char* input_array = new char[length + 1];
-        strcpy(input_array, s.c_str());
-    }while(check_hex(input_array));
+        if( input.size() != RGB_HEX_LENGTH || input[0] != "#"){
+            std::cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
+        }
+        for (int i = 0; i < input.size(); i++){
+            if (!isxdigit(input[i])){
+                std::cout << "Please enter character values between 0-9, a-f, and A-F\n";
+            }
+        }
+    }while( input.size() != RGB_HEX_LENGTH );
 
-    std::cout << "Your hex color is: " << input << std::endl;
+    cout << "Your hex color is: " << input << endl;
 
     return 0;
 }
