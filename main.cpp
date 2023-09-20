@@ -1,5 +1,7 @@
 #include <iostream>
+
 #include <string>
+
 const int RGB_HEX_LENGTH = 7;
 using namespace std;
 
@@ -40,13 +42,14 @@ int main(){
         cout << "Enter a color in hex format (#RRGGBB):";
         getline(cin, input);
 
+
         if( (input.size() != RGB_HEX_LENGTH) || input[0] != '#' || !check(input))
         {
             std::cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
         }
     }while( input.size() != RGB_HEX_LENGTH );
 
-    std::cout << "Your hex color is: " << input << std::endl;
+    cout << "Your hex color is: " << input << endl;
 
     return 0;
 }
