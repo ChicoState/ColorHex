@@ -8,17 +8,42 @@ using std::cin;
 
 const int RGB_HEX_LENGTH = 7;
 
-int main(){
-    string input;
+bool is_hex_formatted(const string &maybe_hex) {
+    if (maybe_hex.size() != RGB_HEX_LENGTH) {
+        return false;
+    }
 
-    do{
+    if (maybe_hex[0] != '#') {
+        return false;
+    }
+
+    for (size_t i = 1; i < maybe_hex.size(); i++) {
+        // check if not in range of number ascii values or hex letter ascii
+        // values, if not, invalid
+        if (!((maybe_hex[i] >= '0' && maybe_hex[i] <= '9') ||
+              (maybe_hex[i] >= 'a' && maybe_hex[i] <= 'f') ||
+              (maybe_hex[i] >= 'A' && maybe_hex[i] <= 'F'))) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+int main() {
+    string input;
+    bool hex_formatted = false;
+
+    do {
         cout << "Enter a color in hex format (#RRGGBB):";
         getline(cin, input);
+        hex_formatted = is_hex_formatted(input);
 
-        if( input.size() != RGB_HEX_LENGTH ){
-            cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
+        if (!hex_formatted) {
+            cout << "Please enter the color in hexadecimal format, "
+                    "starting with # followed by six hex values\n";
         }
-    }while( input.size() != RGB_HEX_LENGTH );
+    } while (!hex_formatted);
 
     cout << "Your hex color is: " << input << endl;
 
