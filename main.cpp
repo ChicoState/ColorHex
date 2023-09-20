@@ -1,5 +1,11 @@
 #include <iostream>
 
+using std::string;
+using std::cout;
+using std::getline;
+using std::endl;
+using std::cin;
+
 const int RGB_HEX_LENGTH = 7;
 
 bool is_hex_notation(std::string const& s){
@@ -9,9 +15,10 @@ bool is_hex_notation(std::string const& s){
 }
 
 int main(){
-    std::string input;
+    string input;
 
     do{
+
         std::cout << "Enter a color in hex format (#RRGGBB):";
         std::getline(std::cin, input);
 
@@ -19,7 +26,8 @@ int main(){
             std::cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
     } while (!is_hex_notation(input));
 
-    std::cout << "Your hex color is: " << input << std::endl;
+
+    cout << "Your hex color is: " << input << endl;
 
     return 0;
 }
