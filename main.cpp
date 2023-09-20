@@ -14,9 +14,12 @@ int main(){
             std::cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
             for (int i = 1; i < input.size(); i++ ) {
                 //Check if input is a valid hex value
-              if (input[i] > 9 || input[i] < 0 || input[i] > 'F' || input[i] < 'A') {
-                std::cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
-                break;
+              if (input[i] > 9 || input[i] < 0 || (input[i] < 'f' && input[i] > 'a')) {
+                if (input[i] != 'A' || input[i] != 'B' ||input[i] != 'C' ||input[i] != 'D' ||input[i] != 'E' ||input[i] != 'F') {
+                                  std::cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
+                    break;
+                }
+
               }
             }
         }
