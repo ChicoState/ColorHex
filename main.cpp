@@ -26,7 +26,7 @@ int main(){
         std::getline(cin, input);
         char* input_array = new char[length + 1];
         strcpy(input_array, s.c_str());
-    }while(check_hex(input_array));
+    }while(!check_hex(input_array));
     cout << "Your hex color is: " << input << endl;
 
     return 0;
