@@ -9,18 +9,22 @@ using std::cin;
 const int RGB_HEX_LENGTH = 7;
 
 int main(){
-    string input;
+        std::string input;
 
-    do{
-        cout << "Enter a color in hex format (#RRGGBB):";
-        getline(cin, input);
+        do{
+                std::cout << "Enter a color in hex format (#RRGGBB):";
+                std::getline(std::cin, input);
 
-        if( input.size() != RGB_HEX_LENGTH ){
-            cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
-        }
-    }while( input.size() != RGB_HEX_LENGTH );
+                if( input.size() != RGB_HEX_LENGTH ){
+                        std::cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
+                }
+                else if( input.at(0) != '#'){
+                        std::cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
+                }
+        }while( input.size() != RGB_HEX_LENGTH || input.at(0) != '#' );
 
-    cout << "Your hex color is: " << input << endl;
+        std::cout << "Your hex color is: " << input << std::endl;
 
-    return 0;
+
+        return 0;
 }
