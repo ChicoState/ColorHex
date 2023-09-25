@@ -1,5 +1,11 @@
 #include <iostream>
 
+using std::string;
+using std::cout;
+using std::getline;
+using std::endl;
+using std::cin;
+
 const int RGB_HEX_LENGTH = 7;
 
 bool isValidHex(std::string input) {
@@ -13,7 +19,7 @@ bool isValidHex(std::string input) {
 }
 
 int main(){
-    std::string input;
+    string input;
 
     do{
         std::cout << "Enter a color in hex format (#RRGGBB):\n";
@@ -30,11 +36,11 @@ int main(){
         }
 
         if( input.size() != RGB_HEX_LENGTH ){
-            std::cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
+            cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
         }
     }while( input.size() != RGB_HEX_LENGTH );
 
-    std::cout << "Your hex color is: " << input << std::endl;
+    cout << "Your hex color is: " << input << endl;
 
     return 0;
 }
