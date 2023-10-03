@@ -20,4 +20,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Build project
-        run: g++ c.cpp -std=c++17 -o ColorHex
+        run: g++ main.cpp -std=c++17 -o ColorHex
