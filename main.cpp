@@ -12,7 +12,14 @@ int main(){
         if( input.size() != RGB_HEX_LENGTH ){
             std::cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
         }
-    }while( input.size() != RGB_HEX_LENGTH );
+	//Check if input is # using ASCII value
+	if (input[0] != 35)
+	{
+		cout << "Please enter the color in hexadecimal format, starting with # followed by six hex values\n";
+    }	
+    }
+	//Check if input is appropriate size then output response
+	while( input.size() == RGB_HEX_LENGTH );
 
     std::cout << "Your hex color is: " << input << std::endl;
 
